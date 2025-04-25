@@ -42,10 +42,10 @@ public class Layer
             for (int i = 0; i < numNodesIn; i++)
             {
                 var num2 = rnd.NextDouble();
-                weights[i, j] = num2;
+                weights[i, j] = Math.Round(num2, 2, MidpointRounding.AwayFromZero);
             }
             var num = rnd.NextDouble();
-            biases[j] = num;
+            biases[j] = Math.Round(num, 2, MidpointRounding.AwayFromZero);
         }
     }
 
